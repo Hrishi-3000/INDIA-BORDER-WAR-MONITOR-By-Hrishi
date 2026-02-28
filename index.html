@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INDIA BORDER WAR MONITOR - By Hrishi</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="glass-header">
+        <div class="header-content">
+          <div class="logo-area">
+            <div class="radar-icon"></div>
+            <div>
+              <h1>INDIA BORDER WAR MONITOR <a href="https://github.com/Hrishi-3000" target="_blank" class="author-link">- By Hrishi</a></h1>
+              <p class="subtitle">LIVE GEOPOLITICAL INTELLIGENCE DASHBOARD</p>
+            </div>
+          </div>
+          <div class="status-area">
+            <div class="status-indicator">
+              <span class="pulse-dot"></span>
+              <span id="system-status">SYSTEM ONLINE</span>
+            </div>
+            <div class="time-display" id="clock">00:00:00</div>
+          </div>
+        </div>
+      </header>
+
+      <main class="dashboard-grid">
+        <!-- Stats Cards -->
+        <section class="stats-section" id="stats-container">
+          <!-- Cards will be injected here via JS -->
+          <div class="loading-spinner"></div>
+        </section>
+
+        <!-- Main Column (Map + Charts) -->
+        <div class="main-column">
+          <!-- Map Section -->
+          <section class="map-section glass-card">
+            <div class="section-header">
+              <h2>LIVE BORDER SURVEILLANCE</h2>
+              <div class="live-badge">LIVE</div>
+            </div>
+            <div id="map"></div>
+          </section>
+
+          <!-- Charts Section -->
+          <section class="charts-section glass-card">
+            <div class="section-header">
+              <h2>TENSION ANALYSIS</h2>
+            </div>
+            <div class="charts-grid">
+              <div class="chart-container">
+                <canvas id="tensionChart"></canvas>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Incident Feed -->
+        <section class="feed-section glass-card">
+          <div class="section-header">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <h2>LIVE INTELLIGENCE FEED</h2>
+              <span class="ai-badge">AI POWERED</span>
+            </div>
+            <button id="refresh-feed" class="refresh-btn">REFRESH</button>
+          </div>
+          <div class="feed-container" id="incident-feed">
+            <!-- Feed items injected via JS -->
+            <div class="loading-feed">Initializing satellite uplink...</div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/src/script.js"></script>
+  </body>
+</html>
+
